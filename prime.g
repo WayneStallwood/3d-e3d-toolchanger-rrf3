@@ -26,7 +26,7 @@ G4 P300
 ;Move Out
 G1 Y150 F2500
 
-;M98 P"pebblewipe.g"	
+M98 P"pebblewipe.g"	
 
 ;G4 S10 ; Wait 10s
 
