@@ -11,6 +11,7 @@ M667 S1 						; Select CoreXY mode
 
 ; Network
 M550 P"ToolChanger" 			; Set machine name
+
 M552 S1							; Enable Networking
 M586 P0 S1 						; Enable HTTP
 M586 P1 S0 						; Disable FTP
@@ -26,7 +27,7 @@ M569 P5 S1 						; Drive 5 E2
 M569 P6 S1 						; Drive 6 E3
 M569 P7 S0 						; Drive 7 COUPLER
 M569 P8 S0 						; Drive 8 UNUSED
-M569 P9 S0 						; Drive 9 UNUSED
+M569 P9 S0 						; Drive 9 See pebble extruder config at the bottom
 
 M584 X0 Y1 Z2 C7 E3:4:5:6 								; Apply custom drive mapping
 M208 X-35:328.5 Y-49:243 Z0:300 C-45:360	 				; Set axis maxima & minima
@@ -36,7 +37,7 @@ M350 C16 I10											; Configure microstepping without interpolation
 M350 X16 Y16 Z16 I1										; Configure microstepping with interpolation
 M566 X300 Y300 Z40 C2 E2:2:2:2							; Set maximum instantaneous speed changes (mm/min)
 M203 X30000 Y30000 Z1200 C5000 E5000:5000:5000:5000	; Set maximum speeds (mm/min)
-M201 X2500 Y2000 Z400 C500 E2500:2500:2500:2500			; Set accelerations (mm/s^2)
+M201 X3500 Y3000 Z400 C500 E2500:2500:2500:2500			; Set accelerations (mm/s^2)
 M906 X1800 Y1800 Z1330 I30   						; Idle motion motors to 30%
 M906 E1000:1000:1000:1000 C500 I10     						; Idle extruder motors to 10%
 
@@ -151,9 +152,10 @@ M92 A360						; Steps/mm
 
 M915 A S5 F0 H200 R0					; A Stall Detection
 
-M950 F7 C"^duex.pwm5" Q600					;Wipe Servo
-M106 P7 C"Wipe" 					;Wipe Servo
+M950 F9 C"^duex.pwm5" Q600					;Wipe Servo
+M106 P9 C"Wipe" 					;Wipe Servo
 
+; End of config
 
 M575 P1 S1 B57600				; Enable LCD
 G29 S2							    ; disable mesh
