@@ -152,7 +152,7 @@ M92 A360						; Steps/mm
 
 M915 A S5 F0 H200 R0					; A Stall Detection
 
-M950 F9 C"^duex.pwm5" Q333					;Wipe Servo
+M950 F9 C"^duex.pwm5" Q600					;Wipe Servo
 M106 P9 C"Wipe" 					;Wipe Servo
 
 ; End of config
