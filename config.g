@@ -123,15 +123,15 @@ M376 H15						; bed compensation taper
 ; Volcano-tool: X-9 Y39 Z-13.5
 ; Hemera-tool: X20 Y43.5 Z-6
 
-G10 P0 X20 Y43.5 Z-5.55					; T0
+G10 P0 X20 Y43.5 Z-5.55					; T0   Good
 G10 P1 X19 Y43.4 Z-5.55					; T1  Tweaked
-G10 P2 X19 Y43.5 Z-5.2					; T2
-G10 P3 X20 Y43.5 Z-5.6					; T3
+G10 P2 X20.2 Y43.5 Z-5.05				; T2
+G10 P3 X20 Y43.5 Z-5.52					; T3  Good  (height)
 
-M572 D0 S0.1 						; pressure advance T0
-M572 D1 S0.1 						; pressure advance T1
-M572 D2 S0.1 						; pressure advance T2
-M572 D3 S0.1 						; pressure advance T3
+;M572 D0 S0.1 						; pressure advance T0
+;M572 D1 S0.1 						; pressure advance T1
+;M572 D2 S0.1 						; pressure advance T2
+;M572 D3 S0.1 						; pressure advance T3
 
 ; Pebble wiper config
 
