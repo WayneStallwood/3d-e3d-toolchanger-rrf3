@@ -126,12 +126,19 @@ M376 H15						; bed compensation taper
 G10 P0 X20 Y43.5 Z-5.55					; T0   Good
 G10 P1 X19 Y43.4 Z-5.55					; T1  Tweaked
 G10 P2 X20.2 Y43.5 Z-5.05				; T2
-G10 P3 X20 Y43.5 Z-5.52					; T3  Good  (height)
+G10 P3 X19 Y43.5 Z-5.52					; T3  Good  (height)
 
 ;M572 D0 S0.1 						; pressure advance T0
 ;M572 D1 S0.1 						; pressure advance T1
 ;M572 D2 S0.1 						; pressure advance T2
 ;M572 D3 S0.1 						; pressure advance T3
+
+
+;Filament Sensors  ** Disable by setting S0 if not fitted **
+M591 D0 P7 C"e0stop" L7 R50:200 E15 S0		; Extruder 0
+M591 D1 P7 C"e1stop" L7 R50:200 E15 S0		; Extruder 1
+M591 D2 P7 C"duex.e2stop" L7 R50:200 E15 S0		; Extruder 2
+M591 D3 P7 C"duex.e3stop" L7 R50:200 E15 S0		; Extruder 3
 
 ; Pebble wiper config
 
