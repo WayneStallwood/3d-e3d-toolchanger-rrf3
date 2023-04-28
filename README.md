@@ -6,3 +6,4 @@
 
 * 4x Hemera Direct Extruders
 * Height Adjusting Pebble Wiper (on Drive9 and PWM channel 5)
+* Filament sensors on each tool (disabled by default)
